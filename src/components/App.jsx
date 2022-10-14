@@ -10,7 +10,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      Hello my darling friends
+      Hello my darling friends and other
     </div>
   );
 };
