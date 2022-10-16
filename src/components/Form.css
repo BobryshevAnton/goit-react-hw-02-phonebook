@@ -1,0 +1,38 @@
+.sectionForm {
+  display: flex;
+  flex-direction: column;
+}
+.sectionTitle {
+  color: grey;
+  font-size: 20px;
+}
+.Form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: rgb(42, 41, 41) solid 1px;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.FormInput {
+  margin-left: 10px;
+  width: 150px;
+  /* margin-right: 10px; */
+}
+.formName {
+  margin-left: 10px;
+  font-style: 15px;
+  margin-bottom: 5px;
+}
+.formBtn {
+  width: 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.phoneLIst {
+  color: rgb(33, 32, 32);
+  font-size: 15px;
+}
