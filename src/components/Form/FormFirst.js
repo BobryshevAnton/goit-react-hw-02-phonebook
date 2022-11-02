@@ -1,25 +1,33 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 
-class Form extends React.Component {
+class FormFirst extends React.Component {
   loginId = nanoid();
+  loginNum = nanoid();
+
   state = {
     name: '',
-    // number: '',
+    number: '',
   };
+
   handleChange = e => {
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
   };
+
   handleOnSubmit = e => {
+    // const message = `${this.state.name} is already in contacts`;
     e.preventDefault();
 
     this.props.onSubmit(this.state);
+
     this.reset();
   };
+
   reset = () => {
-    this.setState({ name: '' });
+    this.setState({ name: '', number: '' });
   };
+
   render() {
     return (
       <form onSubmit={this.handleOnSubmit} className="Form">
@@ -38,6 +46,21 @@ class Form extends React.Component {
           required
           className="FormInput"
         />
+        <label htmlFor={this.loginNum} className="formName">
+          Number
+        </label>
+
+        <input
+          value={this.state.number}
+          onChange={this.handleChange}
+          id={this.loginNum}
+          type="tel"
+          name="number"
+          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          required
+          className="FormInput"
+        />
 
         <button type="submit" className="formBtn">
           Add contact
@@ -47,4 +70,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default FormFirst;

@@ -24,6 +24,7 @@
   margin-left: 10px;
   font-style: 15px;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 .formBtn {
   width: 100px;
@@ -35,4 +36,8 @@
 .phoneLIst {
   color: rgb(33, 32, 32);
   font-size: 15px;
+}
+.phoneName {
+  font-size: 17px;
+  font-weight: bold;
 }
